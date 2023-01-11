@@ -8,14 +8,14 @@ export function Content() {
   const [products, setProducts] = useState([]);
 
 
-  const handleIndexProducts = () => {
+  const handleProductsIndex = () => {
     axios.get("http://localhost:3000/products.json").then(response => {
       console.log(response.data);
       setProducts(response.data);
     });
   };
 
-  useEffect(handleIndexProducts, []);
+  useEffect(handleProductsIndex, []);
 
   return (
     <div>
@@ -24,7 +24,7 @@ export function Content() {
       <br />
       <br />
       <br />
-      <button onClick={handleIndexProducts}>Get data</button>
+      <button onClick={handleProductsIndex}>Get data from API</button>
       <ProductsIndex products={products} />
     </div>
   );
