@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import { ProductsNew } from './ProductsNew';
 import { ProductsIndex } from './ProductsIndex';
+import { Modal } from "./Modal";
 
 export function Content() {
 
@@ -24,8 +25,11 @@ export function Content() {
       <br />
       <br />
       <br />
-      <button onClick={handleProductsIndex}>Get data from API</button>
+      {/* <button onClick={handleProductsIndex}>Get data from API</button> */}
       <ProductsIndex products={products} />
+      <Modal show={true}>
+        <p>TEST</p>
+      </Modal>
     </div>
   );
 }

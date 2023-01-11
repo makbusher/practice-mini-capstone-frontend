@@ -13,6 +13,7 @@ export function ProductsIndex(props) {
               <img src={image.url} />
             </div>
           ))}
+          <button>More Info</button>
           <hr />
         </div>
       ))}
